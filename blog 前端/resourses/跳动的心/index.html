@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>love you !</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*让容器的宽高充满全屏*/
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-color: pink;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .heart{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            transform: rotate(45deg);
+            animation: beat 1.2s alternate infinite;
+            box-shadow: 0 0 30px red;
+        }
+        body div{
+            border-radius: 0 0 6% 0;
+        }
+        .heart::before{
+            content:"";
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: -99px;
+            border-radius: 100px 100px 0 0;
+            box-shadow: 0 0 30px red;
+        }
+        .heart::after{
+            content:"";
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            left: -99px;
+            top: 0;
+            border-radius: 100px 0 0 100px;
+            box-shadow: 0 0 30px red;
+        }
+        /*跳动*/
+        @keyframes beat{
+            0%{
+                transform: rotate(45deg) scale(0.6);
+            }
+            
+            100%{
+                transform: rotate(45deg) scale(1.4);
+            }
+        }
+        .heart p{
+            font-size: 40px;
+            color: pink;
+            text-align: left;
+            transform: rotate(-45deg);
+        }
+        .heart span{
+            font-size: 40px;
+            color: pink;
+            text-align: left;
+            transform: rotate(-45deg);   
+        }
+    </style>
+</head>
+<body>
+        <div class="heart">
+            <p>爱你<span class="iconfont icon-xihuan"></span></p>
+        </div>
+</body>
+</html>

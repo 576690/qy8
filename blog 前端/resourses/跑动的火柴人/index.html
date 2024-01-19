@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>跑步火柴人</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            height: 300px;
+            width: 300px;
+            margin: 50px;
+
+        }
+        .person{
+            position: absolute;
+            left: 150px;
+            top: 160px;
+            animation: run 5s infinite ease-in;
+        }
+        .head{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            top: -30px;
+            left: -6px;
+            animation: head 2s alternate infinite;
+        }
+        .torso{
+            width: 0;
+            height: 60px;
+            border-left: 5px solid #fff;
+            position: absolute;
+            left: 0;
+            top: 15px;
+        }
+        .person .part{
+            position: absolute;
+            left: 0;
+            top: 75px;
+        }
+        .person .part.arm{
+            width: 40px;
+            height: 45px;
+            border-left: 5px solid #fff;
+            border-bottom: 5px solid #fff;
+            position: absolute;
+            top: 15px;
+            right: 300px;
+            transform-origin: 0% 0% 0px;
+            animation: arm 1s ease-in-out infinite;
+        }
+        .person .part.arm.one{
+            transform: rotate3d(0,0,1,80deg);
+            
+        }
+        .person .part.arm.two{
+            transform: rotate3d(0,0,1,-80deg);
+            animation-delay:-0.5s;
+        }
+        .person .part.leg{
+            height: 60px;
+            width: 60px;
+            border-right: 5px solid #fff;
+            border-top: 5px solid #fff;
+            transform-origin: 0% 0% 0px;
+            animation: leg 1s ease-in-out infinite;
+        }
+        .person .part.leg.one{
+            transform: rotate3d(0,0,1,100deg);
+        }
+        .person .part.leg.two{
+            transform: rotate3d(0,0,1,10deg);
+            animation-delay: -0.5s;
+        }
+        /*头部动画*/
+        @keyframes head{
+            0%{
+                transform: rotate3d(0,0,1,5deg);
+            }
+            25%{
+                transform: rotate3d(0,0,1,-30deg) skew(15deg,0deg);
+            }
+            50%{
+                transform: rotate3d(0,0,1,-30deg);
+            }
+            75%{
+                transform: rotate3d(0,0,1,-30deg) skew(15deg,0deg);
+            }
+            
+            100%{
+                transform: rotate3d(0,0,1,20deg) skew(15deg,0deg);
+            }
+        }
+        /*胳膊摆动*/
+        @keyframes arm{
+            0%{
+                transform: rotate3d(0,0,1,80deg);
+            }
+            50%{
+                transform: rotate3d(0,0,1,-70deg);
+            }
+            100%{
+                transform: rotate3d(0,0,1,80deg);
+            }
+        }
+        /*腿摆动*/
+        @keyframes leg{
+            0%{
+                transform: rotate3d(0,0,1,-5deg);
+            }
+            50%{
+                transform: rotate3d(0,0,1,150deg);
+            }
+            100%{
+                transform: rotate3d(0,0,1,-5deg);
+            }
+        }
+        /*向前跑*/
+        @keyframes run{
+            0%{
+                transform: translate(-200px,0px);
+            }
+            100%{
+                transform: translate(1800px,0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--火柴人结构-->
+    <div class="container">
+        <div class="person">
+            <div class="head"></div>
+            <div class="part arm one"></div>
+            <div class="part arm two"></div>
+            <div class="torso"></div>
+            <div class="part leg one"></div>
+            <div class="part leg two"></div>
+        </div>
+    </div>
+</body>
+</html>
