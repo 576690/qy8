@@ -9,8 +9,7 @@ body{
     background-color: #222;
     color:#a5a5a5 ;
     height: 30px;
-    margin: 0 10px;
-    font-size: 15px;
+    font-size: 17px;
 }
 .topnav span{
     float: right;
@@ -18,7 +17,7 @@ body{
 
 .topnav a{
     color: #a5a5a5;
-    margin: 0 10px;
+    margin: 0 20px;
 }
 .topnav a:hover{
     color: #fff;
@@ -36,18 +35,19 @@ body{
     float: left;
 }
 .header-nav {
-    float: right;
-    font-size: 20px;
-    margin: 0 200px;
+    float: right;   
+    margin-right: 200px;
 }
 .header-nav a{
-    margin: 0 20px;
+    margin-right: 100px;
     margin-left: none;
+    font-size: 20px;
 }
 .header-nav span{
+    font-size: 28px;
     color: #2757e7;
-    font-size: 25px;
 }
+
 /*横幅*/
 .banner{
     background-image: url(../images/群山.jpg);
@@ -91,7 +91,10 @@ body{
     color: #6f6c6c;
 }
 .main-left li:hover{
-    box-shadow: 3px 3px 5px #6f6c6c;
+    box-shadow: 5px 5px 8px #000;
+}
+.main-left .a:hover,.main-left .b:hover{
+    box-shadow: 5px 5px 8px #00a7ea;
 }
 .page{
     text-align: center;
