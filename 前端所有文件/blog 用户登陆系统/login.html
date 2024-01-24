@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八组博客--登录</title>
+    <link rel="stylesheet" href="./login.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="pre-box">
+            <h1>WELCOME</h1>
+            <p>JOIN US</p>
+            <div class="img-box">
+                <img src="./images/1.jpg" alt="">
+            </div>
+        </div>
+        <!-- 注册页面 -->
+        <div class="register-form">
+            <div class="title-box">
+                <h1>注册</h1>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="用户名">
+                <input type="password" placeholder="密码">
+                <input type="password" placeholder="确认密码">
+            </div>
+            <div class="btn-box">
+                <button>注册</button>
+                <p onclick="mySwitch()">已有账号？去登录</p>
+            </div>
+        </div>
+        <!-- 登陆页面 -->
+        <div class="login-form">
+            <div class="title-box">
+                <h1>登录</h1>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="用户名">
+                <input type="password" placeholder="密码">
+            </div>
+            <div class="btn-box">
+                <button>登录</button>
+                <p onclick="mySwitch()">还没有账号？去注册</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let flag=true
+        const mySwitch=()=>{
+            if(flag){
+                $(".pre-box").css("transform","translateX(100%)")
+                $(".pre-box").css("background-color","#ccd3f6")
+                $("img").attr("src","./images/2.jpg")
+            }
+            else{
+                $(".pre-box").css("transform","translateX(0%)")
+                $(".pre-box").css("background-color","#e1c5f4")
+                $("img").attr("src","./images/1.jpg")
+            }
+            flag=!flag
+        }
+    </script>
+    <!-- 泡泡实现 -->
+    <script>
+        const bubleCreate=()=>{
+            const body=document.body
+            const buble=document.createElement('span')
+            let r=Math.random()*5+25 //25~30
+            buble.style.width=r+'px'
+            buble.style.height=r+'px'
+            buble.style.left=Math.random()*innerWidth+'px'
+            body.append(buble)
+            setTimeout(() => {
+                buble.remove()
+            }, 4000);
+        }
+        setInterval(() => {
+            bubleCreate()
+        }, 200);
+    </script>
+</body>
+</html>

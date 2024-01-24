@@ -1,0 +1,46 @@
+<!-- 实现一个简单的任务管理器应用（10分）
+（1）	页面上需要包含一个输入框用于输入任务名称，一个按钮用于添加任务，以及一个区域用于显示当前的任务列表。
+（2）	输入任务名称后，点击添加按钮可以将该任务添加到列表中。
+（3）	列表中的每个任务都应该有一个完成按钮，在点击完成按钮后，该任务应从列表中移除。
+（4）	你可以选择在内存中存储任务，也可以使用localStorage实现持久化存储。
+（5）	可以在样式上进行自定义，使之看起来更像一个实际的任务管理器应用。 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>八组博客--留言栏</title>
+    <link rel="stylesheet" href="./留言.css">
+</head>
+
+<body>
+    <div id="bg">
+        <img src="./yixing.jpg">
+    </div>
+    
+    <div id="root">
+        <div class="title">网站留言</div>
+        <div class="con">----欢迎留下您的足迹！</div>
+        <div class="item-add">
+            <input type="text" id="taskname" placeholder="请输入留言" />
+            <button onclick="add()">添加留言</button>
+        </div>
+        <table cellspacing=0 id="index-table">
+            <tr>
+                <td>留言</td>
+                <td>操作</td>
+            </tr>
+        </table>
+    </div>
+    
+    
+</body>
+
+<script src="./留言.js"></script>
+
+</html> 
+
+
