@@ -62,6 +62,14 @@ span{
     box-shadow: 5px 4px 3px rgba(0, 0, 0, 0.1);
     display: flex;
 }
+.return{
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.return:hover{
+    opacity: 0.8;
+}
 .pre-box{
     width: 525px;
     left: 0;
