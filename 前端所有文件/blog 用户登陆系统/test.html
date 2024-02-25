@@ -10,7 +10,7 @@
             overflow-x: hidden;
             height: 100vh;
         }
-        span{
+        article{
             position: absolute;
             bottom: 0;
             background: radial-gradient(circle at 72% 28%,#fff 3px,#ff7edf 8%,#5b5b5b,#aad7f9 100%);
@@ -47,7 +47,7 @@
     <script>
         const bubleCreate=()=>{
             const body=document.body
-            const buble=document.createElement('span')
+            const buble=document.createElement('article')
             let r=Math.random()*5+25 //25~30
             buble.style.width=r+'px'
             buble.style.height=r+'px'
