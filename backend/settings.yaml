@@ -1,0 +1,19 @@
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  db: qy8_db
+  username: root
+  password: root
+  log_level: dev
+
+logger:
+  level: info
+  prefix: '[qy8_dev]'
+  director: log #存放目录
+  show_line: true #是否显示行号
+  log_in_console: true #是否显示文件路径
+
+system:
+  host: "0.0.0.0"
+  port: 8080
+  env: debug

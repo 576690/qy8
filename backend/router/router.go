@@ -11,6 +11,7 @@ import (
 func Router() {
 	//页面映射
 	http.HandleFunc("/", views.HTML.Index)
+	http.HandleFunc("/blog 主页/index.html", views.HTML.Index)
 	currPath, _ := filepath.Abs("../") //获取上一级路径
 
 	http.HandleFunc("/api/v1/post", api.API.SaveAndUpdatePost)
